@@ -1,0 +1,20 @@
+<div *ngIf="!authorExists">
+    <h1>
+        There is no Author with that ID!
+    </h1>
+</div>
+<div *ngIf="authorExists">
+    <div>
+        <table style="width:100%">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>    
+            <tr>
+                <td>{{authorExists.firstName}}</td>
+                <td>{{authorExists.lastName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
