@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
+import { AuthorsComponent, authorsRoutes} from './authors/authors.component';
 import {ContactComponent} from './contact/contact.component';
 import {BooksComponent} from './books/books.component';
 import {BookComponent} from './books/book/book.component';
@@ -16,6 +17,9 @@ const booksRoutes: Routes = [
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'authors', component: AuthorsComponent,
+    children: authorsRoutes
+  },
   {path: 'contact', component: ContactComponent},
   { path: 'login', component: LoginComponent },
   {
